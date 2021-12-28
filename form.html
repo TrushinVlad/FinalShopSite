@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Kembang Flower Mantap</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body class="body">
+        <header>
+        <div class="header1">  
+            <a href="index.html"><img src="images/little_p.png" alt="Logo"></a>
+            <div class="header_menu">
+                <a href="#"><img src="images/head_search.png" width=30 alt="Search"></a>
+                <a href="#" class="header_shop"><img src="images/head_shop.png" width=30 alt="Shop"></a>
+                <a href="#" class="header_su">Sign Up</a>
+                <a href="#" class="header_si">Sign In</a>
+            </div>
+        </div>
+        </header>
+        <main>
+            <div style="text-align:center;">
+            <form name="contact" method="POST" data-netlify="true" style="width: 300px; display: inline-block;">
+                <p>* - обязательно для заполнения</p>
+                <p><b>Личная информация</b></p>
+                  <p></p><label for="name">Имя*:   <input type="text" required placeholder="Ваше имя, напр. Иван" name="name" id="name" class="email3"></label>
+                  <p></p><label for="password">Пароль*:   <input type="password" required placeholder="Пароль" name="password" id="password" class="email3"></label>
+                  <p></p><div>
+                <label>Пол:</label>
+                    <input type="radio" id="radio1" value="man" name="radiob" class="radiobt">
+                    <label for="radio1">Мужской</label>
+                    <input type="radio" id="radio2" value="woman" name="radiob" class="radiobt">
+                    <label for="radio2">Женский</label>
+                
+                  </div>
+                  <p></p><label for="time">Дата рождения:   <input type="text" placeholder="Напр. 01.01.1992" name="time" id="time" class="email2"></label>
+                <p><b>Контактные данные</b></p>
+                <p></p><label for="email">Email*: <input type="email" required placeholder="Напр. 12345@mail.ru" name="email" id="email" class="email3"></label>
+                <p></p><label for="phone">Телефон: <input type="text" placeholder="Напр. +7(880)555-35-35" name="phone" id="phone" class="email2"></label>
+                <p></p><label for="dateCmnct">Удобный интервал для связи (утро, день, вечер, ночь): <input type="text" placeholder="Напр. Каждый день с 10:00 до 14:00" name="dateCmnct" id="dateCmnct" class="email2"></label>
+                <p></p><label for="dop">Доп. информация:   <textarea style="min-width: 125px; min-height: 30px; max-width: 250px; max-height: 125px;" name="dop" id="dop"></textarea></label>
+
+            </form>
+                
+                <p>
+              <form action="#">
+                <button id="clear_b" type="button" class="button1"><img src="images/prev.png" alt="send" width="20" style="vertical-align: middle;">  Сбросить</button>
+              </form>
+              <p>
+              <form action="#">
+                  <button id="submit_b" type="button" class="button1"><img src="images/next.png" alt="send" width="20" style="vertical-align: middle;">  Отправить</button>
+              </form>    
+              <script>
+                  document.getElementById("clear_b").onclick = function(e){
+                      document.getElementById("name").value = "";
+                      document.getElementById("password").value = "";
+                      document.getElementById("time").value = "";
+                      document.getElementById("email").value = "";
+                      document.getElementById("phone").value = "";
+                      document.getElementById("dateCmnct").value = "";
+                      document.getElementById("dop").value = "";
+                  }
+                  document.getElementById("submit_b").onclick = function(e){
+                      console.log('Form successfully submitted')
+                      const handleSubmit = (e) => {
+                      e.preventDefault()
+                      let myForm = document.getElementById('contact');
+                      let formData = new FormData(myForm)
+                      fetch('/', {
+                          method: 'POST',
+                          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                          body: new URLSearchParams(formData).toString()
+                      }).then(() => console.log('Form successfully submitted')).catch((error) =>
+                          alert(error))
+                      }
+                      alert("Data sent!");
+                  }
+              </script>
+            </div>
+            
+            <dl>
+                <dt>Псевдоэлемет</dt>
+                <dd>Это ключевое слово, добавляемое к селектору, которое позволяет стилизовать определённую часть выбранного элемента.</dd>
+                <dt>Псевдокласс</dt>
+                <dd>Это селектор, который выбирает элементы, находящиеся в специфическом состоянии, например, они являются первым элементом своего типа, или на них наведён указатель мыши.</dd>
+                <dd>В отличие от псевдоэлементов, псевдоклассы могут быть использованы для стилизации элемента на основе его состояния.</dd>
+              </dl>
+
+            <div>
+                <p>Псевдэлементы</p>
+                    <p><input type="checkbox" id="chb1" name="chb1" class="checkbox1" checked><label for="chb1">::first-letter</label></p>
+                    <p><input type="checkbox" id="chb2" name="chb2" class="checkbox2"><label for="chb2">::first-line</label></p>
+                    <p><input type="checkbox" id="chb3" name="chb3" class="checkbox1" checked><label for="chb3">::selection</label></p>
+                    <p><input type="checkbox" id="chb4" name="chb4" class="checkbox2"><label for="chb4">::marker</label></p>
+                    <p><input type="checkbox" id="chb5" name="chb5" class="checkbox1"><label for="chb5">::before</label></p>
+                    <p><input type="checkbox" id="chb6" name="chb6" class="checkbox2" checked><label for="chb6">::after</label></p>
+                    <p><input type="checkbox" id="chb7" name="chb7" class="checkbox1" checked><label for="chb7">::placeholder</label></p>
+                <p>Псевдоклассы</p>
+                    <p><input type="checkbox" id="chb8" name="chb8" class="checkbox1"><label for="chb8">:root</label></p>
+                    <p><input type="checkbox" id="chb9" name="chb9" class="checkbox2"><label for="chb9">:link</label></p>
+                    <p><input type="checkbox" id="chb10" name="chb10" class="checkbox1"><label for="chb10">:visited</label></p>
+                    <p><input type="checkbox" id="chb11" name="chb11" class="checkbox2" checked><label for="chb11">:hover</label></p>
+                    <p><input type="checkbox" id="chb12" name="chb12" class="checkbox1" checked><label for="chb12">:active</label></p>
+                    <p><input type="checkbox" id="chb13" name="chb13" class="checkbox2" checked><label for="chb13">:focus</label></p>
+                    <p><input type="checkbox" id="chb14" name="chb14" class="checkbox1"><label for="chb14">:Псевдоклассы группы child</label></p>
+                    <p><input type="checkbox" id="chb15" name="chb15" class="checkbox2" checked><label for="chb15">:Псевдоклассы группы type</label></p>
+                    <p><input type="checkbox" id="chb16" name="chb16" class="checkbox1" checked><label for="chb16">:checked</label></p>
+                    <p><input type="checkbox" id="chb17" name="chb17" class="checkbox2" checked><label for="chb17">:disabled</label></p>
+                    <p><input type="checkbox" id="chb18" name="chb18" class="checkbox1" checked><label for="chb18">:enabled</label></p>
+                    <p><input type="checkbox" id="chb19" name="chb19" class="checkbox2" checked><label for="chb19">:required</label></p>
+            </div>
+        </main>
+        <footer>
+            <hr class="hr2">
+            <div class="flex-container">
+                <div><!-- 1 -->
+                    <p class="text2_2">
+                        <b>PLANTKU</b>
+                    </p>
+                    <p class="text2_3">
+                        <b>Plantku House</b>
+                    </p>
+                    <p class="text2_6">
+                        Jl. Laksda Adisucipto No.51, Demangan, Kec. Depok, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55282
+                    </p>
+                </div>
+                <div><!-- 2 -->
+                    <p class="text2_1">
+                        <b>Perusahaan</b>
+                    </p>
+                    <p class="text2_1">
+                        Tentang Kami
+                    </p>
+                    <p class="text2_3">
+                        Hubungi Kami
+                    </p>
+                </div>
+                <div><!-- 3 -->
+                    <p class="text2_1">
+                        <b>Produk</b>
+                    </p>
+                    <p class="text2_1">
+                        Tanaman
+                    </p>
+                    <p class="text2_3">
+                        Tanaman Lain
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
