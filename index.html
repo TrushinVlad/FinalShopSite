@@ -21,7 +21,7 @@
         <main>
             <section class="flex-container"><!-- 1. Главная картинка, тайтл -->
                 <img src="images/main.png" width="608" height="740" alt="">
-                <div>
+                <div class="brkpntc1">
                     <div>
                         <p class="title-text">Kembang Flower Mantap</p>
                         <p class="title-text-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
@@ -129,16 +129,18 @@
                     <p><b>IDR 85.000</b></p>
                 </div>
                 <div class="cactus">
-                    <div class="cactusAnim" style="background-color: #EEEEEE; background-image: url('images/k5.png'); background-size: contain; width: 216px; height: 217px;">
-
+                    <div style="height: 300px; top: -16px; position: relative;">
+                        <div class="cactusAnim" style="background-color: #EEEEEE; background-image: url('images/k5.png'); background-size: contain; width: 216px; height: 217px;">
+    
+                            <p style="position: relative; top: 237px;">Kecubung Plants</p>
+                            <p style="position: relative; top: 237px;"><b>IDR 85.000</b></p>
+                        </div>
                     </div>
-                    <p>Kecubung Plants</p>
-                    <p><b>IDR 85.000</b></p>
                 </div>
             </section>
 
             <section class="flex-container6"><!-- 4. Реклама -->
-                <div>
+                <div class="brkpntc2">
                     <div>
                         <p class="text3_2"><b>Buy more plants, it helps you to be relaxed</b></p>
                         <p class="text2_7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida gravida aliquam. Pellentesque et lobortis nisl. Sed et mauris justo. Nulla eu enim non mauris maximus dignissim. Maecenas vitae eros sapien. Quisque pellentesque tempus dignissim.</p>
@@ -160,67 +162,69 @@
                 <img class="image2" src="images/f2.png" alt=""/>
             </section>
         </main>
-        <hr class="hr2">
-        <footer class="flex-container"><!-- 6. Конец -->
-            <div><!-- 1 -->
-                <p class="text2_2">
-                    <b>PLANTKU</b>
-                </p>
-                <p class="text2_3">
-                    <b>Plantku House</b>
-                </p>
-                <p class="text2_6">
-                    Jl. Laksda Adisucipto No.51, Demangan, Kec. Depok, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55282
-                </p>
-            </div>
-            <div><!-- 2 -->
-                <p class="text2_1">
-                    <b>Perusahaan</b>
-                </p>
-                <p class="text2_1">
-                    Tentang Kami
-                </p>
-                <p class="text2_3">
-                    Hubungi Kami
-                </p>
-            </div>
-            <div><!-- 3 -->
-                <p class="text2_1">
-                    <b>Produk</b>
-                </p>
-                <p class="text2_1">
-                    Tanaman
-                </p>
-                <p class="text2_3">
-                    Tanaman Lain
-                </p>
-            </div>
-            <div><!-- 4 -->
-                <p class="text2_5">
-                    <b>Berlangganan Email Kami</b>
-                </p>
-                <input type="email" name="email" placeholder="E-mail" class="email">
-                <br>
-                <form action="#" target="_blank">
-                    <button class="button2">Submit</button>
-                </form>
-                <!--
-                    onclick:
-
-                    <form action="option1.php">
-
-$host = 'sql6.freemysqlhosting.net'; //имя хоста
-$user = 'sql6444124'; //имя пользователя
-$password = '7XXgdFyRrG'; //пароль
-$db_name = 'sql6444124'; //имя бд
-$link = mysqli_connect($host, $user, $password, $db_name, 3306);
-mysqli_query($link, "SET NAMES 'utf8'");
-$query = "SELECT * FROM table1 WHERE name = 'Ivan'";
-$result = mysqli_query($link, $query);
-$result->data_seek(0);
-$datarow = $result->fetch_array();
-echo $datarow['name'];
-                -->
+        <footer><!-- 6. Конец -->
+            <hr class="hr2">
+            <div class="flex-container">
+                <div><!-- 1 -->
+                    <p class="text2_2">
+                        <b>PLANTKU</b>
+                    </p>
+                    <p class="text2_3">
+                        <b>Plantku House</b>
+                    </p>
+                    <p class="text2_6">
+                        Jl. Laksda Adisucipto No.51, Demangan, Kec. Depok, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55282
+                    </p>
+                </div>
+                <div><!-- 2 -->
+                    <p class="text2_1">
+                        <b>Perusahaan</b>
+                    </p>
+                    <p class="text2_1">
+                        Tentang Kami
+                    </p>
+                    <p class="text2_3">
+                        Hubungi Kami
+                    </p>
+                </div>
+                <div><!-- 3 -->
+                    <p class="text2_1">
+                        <b>Produk</b>
+                    </p>
+                    <p class="text2_1">
+                        Tanaman
+                    </p>
+                    <p class="text2_3">
+                        Tanaman Lain
+                    </p>
+                </div>
+                <div><!-- 4 -->
+                    <p class="text2_5">
+                        <b>Berlangganan Email Kami</b>
+                    </p>
+                    <input type="email" name="email" placeholder="E-mail" class="email">
+                    <br>
+                    <form action="#" target="_blank">
+                        <button class="button2">Submit</button>
+                    </form>
+                    <!--
+                        onclick:
+    
+                        <form action="option1.php">
+    
+    $host = 'sql6.freemysqlhosting.net'; //имя хоста
+    $user = 'sql6444124'; //имя пользователя
+    $password = '7XXgdFyRrG'; //пароль
+    $db_name = 'sql6444124'; //имя бд
+    $link = mysqli_connect($host, $user, $password, $db_name, 3306);
+    mysqli_query($link, "SET NAMES 'utf8'");
+    $query = "SELECT * FROM table1 WHERE name = 'Ivan'";
+    $result = mysqli_query($link, $query);
+    $result->data_seek(0);
+    $datarow = $result->fetch_array();
+    echo $datarow['name'];
+                    -->
+                </div>
             </div>
         </footer>
     </body>

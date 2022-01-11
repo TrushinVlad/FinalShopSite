@@ -6,7 +6,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
         <link rel="stylesheet" href="styles/style.css">
     </head>
-    <body class="body">
+    <body class="body" style="height: 100%;">
         <header>
         <div class="header1">  
             <a href="index.html"><img src="images/little_p.png" alt="Logo"></a>
@@ -22,24 +22,25 @@
             <div style="text-align:center;">
             <form name="contact" method="POST" data-netlify="true" style="width: 300px; display: inline-block;">
                 <p>* - обязательно для заполнения</p>
-                <p><b>Личная информация</b></p>
-                  <p></p><label for="name">Имя*:   <input type="text" required placeholder="Ваше имя, напр. Иван" name="name" id="name" class="email3"></label>
-                  <p></p><label for="password">Пароль*:   <input type="password" required placeholder="Пароль" name="password" id="password" class="email3"></label>
-                  <p></p><div>
-                <label>Пол:</label>
+                <fieldset>
+                    <legend><b>Личная информация</b></legend>
+                    <p></p><label for="name">Имя*:   <input type="text" required placeholder="Ваше имя, напр. Иван" name="name" id="name" class="email3"></label>
+                    <p></p><label for="password">Пароль*:   <input type="password" required placeholder="Пароль" name="password" id="password" class="email3"></label>
+                    <p></p><div>
+                    <label>Пол:</label>
                     <input type="radio" id="radio1" value="man" name="radiob" class="radiobt">
                     <label for="radio1">Мужской</label>
                     <input type="radio" id="radio2" value="woman" name="radiob" class="radiobt">
                     <label for="radio2">Женский</label>
-                
-                  </div>
-                  <p></p><label for="time">Дата рождения:   <input type="text" placeholder="Напр. 01.01.1992" name="time" id="time" class="email2"></label>
-                <p><b>Контактные данные</b></p>
-                <p></p><label for="email">Email*: <input type="email" required placeholder="Напр. 12345@mail.ru" name="email" id="email" class="email3"></label>
-                <p></p><label for="phone">Телефон: <input type="text" placeholder="Напр. +7(880)555-35-35" name="phone" id="phone" class="email2"></label>
-                <p></p><label for="dateCmnct">Удобный интервал для связи (утро, день, вечер, ночь): <input type="text" placeholder="Напр. Каждый день с 10:00 до 14:00" name="dateCmnct" id="dateCmnct" class="email2"></label>
-                <p></p><label for="dop">Доп. информация:   <textarea style="min-width: 125px; min-height: 30px; max-width: 250px; max-height: 125px;" name="dop" id="dop"></textarea></label>
-
+                    <p></p><label for="time">Дата рождения:   <input type="text" placeholder="Напр. 01.01.1992" name="time" id="time" class="email2"></label>
+                </fieldset>
+                <fieldset>
+                    <legend><b>Контактные данные</b></legend>
+                    <p></p><label for="email">Email*: <input type="email" required placeholder="Напр. 12345@mail.ru" name="email" id="email" class="email3"></label>
+                    <p></p><label for="phone">Телефон: <input type="text" placeholder="Напр. +7(880)555-35-35" name="phone" id="phone" class="email2"></label>
+                    <p></p><label for="dateCmnct">Удобный интервал для связи (утро, день, вечер, ночь): <input type="text" placeholder="Напр. Каждый день с 10:00 до 14:00" name="dateCmnct" id="dateCmnct" class="email2"></label>
+                    <p></p><label for="dop">Доп. информация:   <textarea style="min-width: 125px; min-height: 30px; max-width: 250px; max-height: 125px;" name="dop" id="dop"></textarea></label>
+                </fieldset>
             </form>
                 
                 <p>
